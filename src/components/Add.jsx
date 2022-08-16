@@ -11,7 +11,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import ImageIcon from "@mui/icons-material/Image";
@@ -35,7 +35,7 @@ const UserBox = styled(Box)({
 function Add() {
   const [open, setOpen] = useState(false);
   return (
-    <>
+    <Fragment>
       <Tooltip
         onClick={(e) => setOpen(true)}
         title="Delete"
@@ -101,7 +101,7 @@ function Add() {
           </ButtonGroup>
         </Box>
       </StyledModal>
-    </>
+    </Fragment>
   );
 }
 
